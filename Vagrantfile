@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
 
   config.omnibus.chef_version = :latest
   config.berkshelf.enabled = true
+  config.vbguest.installer = "CloudUbuntuVagrant"
 
   config.vm.provision :chef_solo do |chef|
     chef.run_list = %w(
